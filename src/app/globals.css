@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+.navbar {
+  input {
+    display: none;
+  }
+}
+
+.nav-text {
+  display: none;
+}
+
+&:has(input:checked) .nav-text {
+  display: block;
+}
+
+canvas {
+  with: 100% !important;
+}
+table th {
+  padding: 15px 20px;
+  white-space: nowrap;
+}
+table td {
+  padding: 20px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.112);
+}
